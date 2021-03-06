@@ -1,4 +1,4 @@
-from MyAlign import MyAlign
+from "/content/bioinformatics_stockholm/msa/MyAlign" import MyAlign
 from MySeq import MySeq
 from SubstMatrix import SubstMatrix
 
