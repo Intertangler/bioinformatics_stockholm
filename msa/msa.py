@@ -1,3 +1,5 @@
+import numpy as np
+
 def translate_codon(cod):
     """Translates a codon into an aminoacid using an internal dictionary with the standard genetic code."""
     tc = {"GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
