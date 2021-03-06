@@ -384,7 +384,15 @@ class MultipleAlignment():
 def printMat(mat):
     for i in range(0, len(mat)):
         print(mat[i])
+import panel as pn
+import panel.widgets as pnw
 
+import bokeh
+from bokeh.plotting import figure
+from bokeh.models import ColumnDataSource, Plot, Grid, Range1d
+from bokeh.models.glyphs import Text, Rect
+from bokeh.layouts import gridplot
+import bokeh.io
 def view_alignment(aln, fontsize="9pt", plot_width=800):
     """Bokeh sequence alignment view"""
 
