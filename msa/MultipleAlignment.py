@@ -1,7 +1,16 @@
-from PairwiseAlignment import PairwiseAlignment
-from MyAlign import MyAlign
-from MySeq import MySeq
-from SubstMatrix import SubstMatrix
+import importlib.util
+spec = importlib.util.spec_from_file_location("module.name", "/content/bioinformatics_stockholm/msa/MyAlign.py")
+MyAlign = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(MyAlign)
+spec = importlib.util.spec_from_file_location("module.name", "/content/bioinformatics_stockholm/msa/MySeq.py")
+MySeq = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(MySeq)
+spec = importlib.util.spec_from_file_location("module.name", "/content/bioinformatics_stockholm/msa/SubstMatrix.py")
+SubstMatrix = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(SubstMatrix)
+spec = importlib.util.spec_from_file_location("module.name", "/content/bioinformatics_stockholm/msa/PairwiseAlignment.py")
+PairwiseAlignment = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(PairwiseAlignment)
 
 
 class MultipleAlignment():
