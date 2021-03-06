@@ -1,4 +1,7 @@
-from "/content/bioinformatics_stockholm/msa/MyAlign" import MyAlign
+import importlib.util
+spec = importlib.util.spec_from_file_location("module.name", "/content/bioinformatics_stockholm/msa/MyAlign.py")
+MyAlign = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(MyAlign)
 from MySeq import MySeq
 from SubstMatrix import SubstMatrix
 
