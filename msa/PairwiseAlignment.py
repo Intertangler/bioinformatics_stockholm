@@ -70,7 +70,7 @@ class PairwiseAlignment:
                 res[0] = self.seq1[i - 1] + res[0]
                 res[1] = "-" + res[1]
                 i -= 1
-        return MyAlign(res, self.seq1.seq_type)
+        return MyAlign.MyAlign(res, self.seq1.seq_type)
 
     def smith_Waterman(self, seq1, seq2):
         if (seq1.seq_type != seq2.seq_type): return None
