@@ -80,3 +80,24 @@ def best_alignment(db,query,w):
     print(bestSeq)
     if bestScore < 0: return ()
     else: return res
+
+def read_database_fasta(filename):
+    db = []
+    with open(filename, "r") as file:
+        for seq_record in SeqIO.parse(file, "fasta"):
+            db.append(seq_record)
+    return db
+
+def best_alignment_fasta(db,query,w):
+    m = build_map(query,w)
+    bestScore = -1.0
+    res = []#(0,0,0,0,0)
+    for k in range(0,len(db)):
+        bestSeq = hit_best_score(str(db[k].seq),query,m,w)
+        if bestSeq != ():
+            score = bestSeq[3]
+            if score > bestScore or (score == bestScore and bestSeq[2] <res[2]):
+                bestScore = score
+                res = bestSeq[0], bestSeq[1], bestSeq[2], bestSeq[3],k
+    if bestScore < 0: return ()
+    else: return set(res)   
