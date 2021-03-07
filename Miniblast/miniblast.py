@@ -1,3 +1,6 @@
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio import pairwise2
 #first step is to create a database
 #the database is a simple list of sequences (strings)
 #we define a function that loads the list from a text file
