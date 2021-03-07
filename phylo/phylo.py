@@ -110,8 +110,7 @@ def test():
     print(g.distance_leaves(1,4))
     print(g.distance_leaves(1,2))
 
-if __name__ == '__main__':
-    test()
+
 class SubstMatrix:
 
     def __init__(self):
@@ -177,10 +176,6 @@ def test2():
     print(sm["G","G"])
 
 
-if __name__ == "__main__":   
-    test1()
-    print()
-    test2()
 
 class NumMatrix:
 
@@ -397,9 +392,6 @@ def test():
     print(alin.recover_align())
     
 
-if __name__ == "__main__":   
-
-    test()
 # -*- coding: utf-8 -*-
 
 def translate_codon (cod):
@@ -491,15 +483,7 @@ class MySeq:
             seq_aa += translate_codon(cod)
         return MySeq(seq_aa, "PROTEIN")      
         
-if __name__ == "__main__":   
-    s1 = MySeq("ATGTGATAAGAATAGAATGCTGAATAAATAGAATGACAT")
-    s2 = MySeq("MKVVLSVQERSVVSLL", "PROTEIN")
-    print(s1.validate(), s2.validate())
-    print(s1)
-    s3 = s1.transcription()
-    s3.show_info_seq()
-    s4 = s1.reverse_comp().translate()
-    s4.show_info_seq()
+
 class HierarchicalClustering:
 
     def __init__(self, matdists):
@@ -551,8 +535,7 @@ def test():
     arv = hc.execute_clustering()
     arv.print_tree()
     
-if __name__ == '__main__': 
-    test()
+
 
 class UPGMA:
 
